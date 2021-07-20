@@ -1,0 +1,38 @@
+{
+    "name": "codeplace-io/userback-bundle",
+    "type": "symfony-bundle",
+    "description": "userback.io integration symfony bundle",
+    "keywords": [
+        "Symfony",
+        "Codeplace",
+        "Userback"
+    ],
+    "homepage": "https://github.com/codeplace-io/UserbackBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maciej Żukiewicz",
+            "email": "maciej.zukiewicz@codeplace.io"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2",
+        "symfony/config": "^5.0",
+        "symfony/dependency-injection": "^5.0",
+        "symfony/framework-bundle": "^5.0",
+        "symfony/http-kernel": "^5.0",
+        "symfony/twig-bundle": "^5.0",
+        "symfony/event-dispatcher": "^5.0",
+        "symfony/http-foundation": "^5.0"
+    },
+    "require-dev": {
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeplace\\UserbackBundle\\": "src/"
+        }
+    }
+}
