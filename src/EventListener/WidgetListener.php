@@ -39,10 +39,14 @@ final class WidgetListener implements EventSubscriberInterface
         }
 
         $content = $response->getContent();
+
+        if (!is_string($content)) {
+            return;
+        }
+
         $pos = strripos($content, '</body>');
 
         if (false !== $pos) {
-//            dd($this->widgetRenderer->renderWidgetScript());
             $widget = "\n".str_replace("\n", '', $this->widgetRenderer->renderWidgetScript())."\n";
             $content = substr($content, 0, $pos).$widget.substr($content, $pos);
             $response->setContent($content);
